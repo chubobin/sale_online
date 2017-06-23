@@ -38,13 +38,13 @@ public class TestZookeeper extends BaseZookeeper{
 		
 		ZooKeeper startZk = test.startZk();
 		
-		if(startZk!=null){
+		if(startZk==null){
 			String createNode = test.createNode(startZk,PATH, "youaremytest");
 			logger.info("======"+createNode);
 			String node = test.getNode(startZk, PATH);
 			
 		}else{
-			logger.debug("=======i already have this");
+			logger.info("=======i already have this");
 		}
 	}
 }
